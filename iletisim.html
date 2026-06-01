@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Dünyası | İletişim & Sipariş</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-grup {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-grup label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        .form-grup input, .form-grup select, .form-grup textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            width: 100%;
+            font-family: inherit;
+        }
+        .form-grup input:focus, .form-grup select:focus, .form-grup textarea:focus {
+            border-color: #1abc9c;
+            outline: none;
+        }
+        .btn-gonder {
+            background-color: #1abc9c;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        .btn-gonder:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 KİTAP DÜNYASI</h1>
+        <p>Hızlı Sipariş Formu ve İletişim Hattı</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="kitaplar.html">Kitaplar & Fiyatlar</a>
+        <a href="iletisim.html">İletişim / Sipariş</a>
+    </nav>
+
+    <div class="container" style="max-width: 600px;">
+        <h2 style="text-align: center; color: #2c3e50; margin-bottom: 25px;">Sipariş Talep Formu</h2>
+        
+        <form action="mailto:proje-ekibimiz@gmail.com" method="post" enctype="text/plain">
+            
+            <div class="form-grup">
+                <label for="adsoyad">Müşteri Adı Soyadı:</label>
+                <input type="text" id="adsoyad" name="Ad Soyad" placeholder="Adınızı ve soyadınızı giriniz..." required>
+            </div>
+
+            <div class="form-grup">
+                <label for="eposta">E-Posta Adresiniz:</label>
+                <input type="email" id="eposta" name="E-posta" placeholder="ornek@domain.com" required>
+            </div>
+
+            <div class="form-grup">
+                <label for="kitap-secim">Sipariş Edilecek Kitap:</label>
+                <select id="kitap-secim" name="Talep Edilen Kitap">
+                    <optgroup label="Dünya Klasikleri">
+                        <option value="Seker Portakali">Şeker Portakalı - 85 TL</option>
+                        <option value="Suc ve Ceza">Suç ve Ceza - 140 TL</option>
+                        <option value="Donusum">Dönüşüm - 45 TL</option>
+                        <option value="1984">1984 - 95 TL</option>
+                    </optgroup>
+                    <optgroup label="Türk Edebiyatı">
+                        <option value="Kurk Mantolu Madonna">Kürk Mantolu Madonna - 65 TL</option>
+                        <option value="Tutunamayanlar">Tutunamayanlar - 180 TL</option>
+                        <option value="Calikusu">Çalıkuşu - 110 TL</option>
+                        <option value="Saatleri Ayarlama Enstitusu">Saatleri Ayarlama Enstitüsü - 125 TL</option>
+                    </optgroup>
+                    <optgroup label="Tarih & Arastirma">
+                        <option value="Nutuk">Nutuk - 120 TL</option>
+                        <option value="Bir Omur Nasil Yasanir">Bir Ömür Nasıl Yaşanır? - 90 TL</option>
+                        <option value="Kisa Osmanli Tarihi">Kısa Osmanlı Tarihi - 105 TL</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="form-grup">
+                <label for="mesaj">Teslimat Adresi ve Notunuz:</label>
+                <textarea id="mesaj" name="Adres ve Mesaj" rows="4" placeholder="Kitabın gönderileceği açık adresi yazınız..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-gonder">📬 E-Posta İle Siparişi Tamamla</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kitap Dünyası - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
